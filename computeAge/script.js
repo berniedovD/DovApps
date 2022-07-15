@@ -1,8 +1,6 @@
-document.write("<h1>Hello World</h1>");
-document.write('<label for="fname">First name:</label>');
-document.write('<input type="text" id="fname" name="fname"><br><br>');
-for (let i = 0; i < 10; i++) {
-  document.write(`<h1 class='red'>  ${i} </h1>`);
-  console.log(i);
+console.log("at start of script.js in computeAge app");
+function handleClickChange() {
+  console.log("click change button");
+  const floatContainer = document.getElementById("float-container");
+  floatContainer.setAttribute("class", "float-container-alt");
 }
-console.log(fname);

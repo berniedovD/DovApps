@@ -1,18 +1,28 @@
 <html>
   <head>
-    <title>Multiplication Table</title>
-    <script type="text/javascript" src="test.js"></script>
+    <title>Age</title>
+    <script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="a">
+    <div class="float-container">
+      <div class="float-child">
+        <div class="green">Float Column 1</div>
+      </div>
+
+      <div class="float-child">
+        <div class="blue">Float Column 2</div>
+      </div>
+    </div>
+    <div id="div-heading">
+      <h1>Compute Age</h1>
+      <h1>Today's Date is:</h1>
+    </div>
+    <div id="enterDOB">
       <label for="DOB">Enter Date of Birth </label>
       <input type="date" id="DOB" name="DOB" />
       <br />
       <button onclick="getInput()">Submit</button>
-    </div>
-    <div>
-      <h1 id="today">Today's Date is</h1>
     </div>
   </body>
 </html>
