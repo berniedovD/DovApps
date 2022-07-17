@@ -12,5 +12,7 @@ function handleClickChange() {
   }
   console.log(document.getElementById("green").textContent);
   outText = document.getElementById("output-text");
-  outText.textContent = document.getElementById("green").textContent;
+  calc = document.getElementById("green").textContent;
+  calc = calc * 5;
+  outText.textContent = calc;
 }
