@@ -10,4 +10,7 @@ function handleClickChange() {
     floatContainer.setAttribute("class", "float-container-alt");
     state = 1;
   }
+  console.log(document.getElementById("green").textContent);
+  outText = document.getElementById("output-text");
+  outText.textContent = document.getElementById("green").textContent;
 }
