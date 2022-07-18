@@ -1,0 +1,16 @@
+function computeAge(yDOB, mDOB, dDOB, yCur, mCur, dCur) {
+  console.log(`DOB =${yDOB} ${mDOB} ${dDOB}`);
+  console.log(`today= ${yCur}-${mCur}-${dCur}`);
+  let ageYears = yyyy - yDOB;
+  if (mCur < mDOB) {
+    ageYears = ageYears - 1;
+    exMonths = mDOB - mCur;
+    ageMonths = 12 - exMonths;
+  } else {
+    exMonths = mCur - mDOB;
+    ageMonths = exMonths;
+  }
+
+  return { ageYears: ageYears, ageMonths: ageMonths };
+}
+export { computeAge };
