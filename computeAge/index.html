@@ -1,28 +1,22 @@
 <html>
   <head>
     <title>Age</title>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="float-container">
-      <div class="float-child">
-        <div id="green" class="green">Float Column 1</div>
+      <div id="div-heading">
+        <h1>Compute Age</h1>
+        <h1 id="todayd" class="today1">Today's Date is: vvvv</h1>
       </div>
-
-      <div class="float-child">
-        <div class="blue">Float Column 2</div>
+      <div id="enterDOB" style="font-size: 40px">
+        <label for="DOB">Enter Date of Birth </label>
+        <input type="date" id="DOB" style="font-size: 40px" name="DOB" />
+        <br />
+        <h1 id="displayAge"></h1>
+        <button onclick="displayAge()">Submit</button>
       </div>
-    </div>
-    <div id="div-heading">
-      <h1>Compute Age</h1>
-      <h1>Today's Date is:</h1>
-    </div>
-    <div id="enterDOB">
-      <label for="DOB">Enter Date of Birth </label>
-      <input type="date" id="DOB" name="DOB" />
-      <br />
-      <button onclick="getInput()">Submit</button>
     </div>
   </body>
 </html>
