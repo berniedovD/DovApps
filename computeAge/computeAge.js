@@ -1,5 +1,6 @@
 function computeAge(yDOB, mDOB, dDOB, yCur, mCur, dCur) {
   console.log("Inside computeAge");
+  console.log(`yCUR=${yCur} mCUR=${mCur}`);
   let ageYears = yCur - yDOB;
   let exMonths;
   let ageMonths;

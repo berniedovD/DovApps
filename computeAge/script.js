@@ -3,10 +3,13 @@ import { fmtDate } from "./fmtDate.js";
 
 console.log("at top of script.js");
 
-const { fmtDate: outDate } = fmtDate(new Date());
+let todayDt = fmtDate(new Date());
+const { fmtDate: outDate } = todayDt;
 document.getElementById("todayd").textContent = outDate;
 
-document.getElementById("subBtn").addEventListener("click", displayAge);
+document
+  .getElementById("subBtn")
+  .addEventListener("click", () => displayAge(todayDt));
 
 document
   .getElementById("reload")

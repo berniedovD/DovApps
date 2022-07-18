@@ -1,16 +1,17 @@
 import { fmtDate } from "./fmtDate.js";
 import { computeAge } from "./computeAge.js";
-function displayAge() {
+
+function displayAge(todayDate) {
   console.log("inside the displayAge function");
+  console.log(todayDate);
   const inDate = document.getElementById("DOB").value;
   let year = parseInt(inDate.substring(0, 4));
   let month = parseInt(inDate.substring(5, 7));
   let day = parseInt(inDate.substring(8, 10));
 
-  const ltoday = new Date();
-  const { fmtDate: lfmtToday, yyyy, mm, dd } = fmtDate(ltoday);
+  const { yyyy: cYear, mm: cMM, dd: cDD } = todayDate;
 
-  let { ageYears, ageMonths } = computeAge(year, month, day, yyyy, mm, dd);
+  let { ageYears, ageMonths } = computeAge(year, month, day, cYear, cMM, cDD);
 
   let dAge = document.getElementById("displayAge");
   if (!Number.isNaN(ageYears)) {
