@@ -27,7 +27,9 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 20%;
+  margin: 30px;
 }
 #buttons {
   width: 50%;
+  margin: 0px;
 }
