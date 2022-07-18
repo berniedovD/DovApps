@@ -1,3 +1,4 @@
+import { computeAge } from ".computeAge.js";
 const today = new Date();
 console.log(today);
 const yyyy = today.getFullYear();
@@ -28,20 +29,4 @@ function displayAge() {
   } else {
     dAge.textContent = "could not compute age - enter proper DOB";
   }
-}
-
-function computeAge(yDOB, mDOB, dDOB, yCur, mCur, dCur) {
-  console.log(`DOB =${yDOB} ${mDOB} ${dDOB}`);
-  console.log(`today= ${yCur}-${mCur}-${dCur}`);
-  let ageYears = yyyy - yDOB;
-  if (mCur < mDOB) {
-    ageYears = ageYears - 1;
-    exMonths = mDOB - mCur;
-    ageMonths = 12 - exMonths;
-  } else {
-    exMonths = mCur - mDOB;
-    ageMonths = exMonths;
-  }
-
-  return { ageYears: ageYears, ageMonths: ageMonths };
 }
