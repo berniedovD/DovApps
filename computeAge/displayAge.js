@@ -3,7 +3,7 @@ import { computeAge } from "./computeAge.js";
 
 function displayAge(todayDate) {
   console.log("inside the displayAge function");
-  console.log(todayDate);
+
   const inDate = document.getElementById("DOB").value;
   let year = parseInt(inDate.substring(0, 4));
   let month = parseInt(inDate.substring(5, 7));
