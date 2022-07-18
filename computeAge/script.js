@@ -14,13 +14,30 @@ function displayAge() {
   year = parseInt(inDate.substring(0, 4));
   month = parseInt(inDate.substring(5, 7));
   day = parseInt(inDate.substring(8, 10));
+  const today = new Date();
+  console.log(today);
+  const yyyy = today.getFullYear();
+  const mm = today.getMonth() + 1;
+  const dd = today.getDate();
+
   let dAge = document.getElementById("displayAge");
-  let age = computeAge(year, month, day);
-  dAge.textContent = `${age} Years Old`;
+  let age = computeAge(year, month, day, yyyy, mm, dd);
+  const { ageYears, ageMonths } = age;
+  dAge.textContent = `${ageYears} Years and ${ageMonths} Months Old`;
 }
 
-function computeAge(yDOB, mDOB, dDOB) {
-  console.log(`${yDOB} ${mDOB} ${dDOB}`);
+function computeAge(yDOB, mDOB, dDOB, yCur, mCur, dCur) {
+  console.log(`DOB =${yDOB} ${mDOB} ${dDOB}`);
+  console.log(`today= ${yCur}-${mCur}-${dCur}`);
   let ageYears = yyyy - yDOB;
-  return ageYears;
+  if (mCur < mDOB) {
+    ageYears = ageYears - 1;
+    exMonths = mDOB - mCur;
+    ageMonths = 12 - exMonths;
+  } else {
+    exMonths = mCur - mDOB;
+    ageMonths = exMonths;
+  }
+
+  return { ageYears: ageYears, ageMonths: ageMonths };
 }
