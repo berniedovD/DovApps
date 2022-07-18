@@ -23,7 +23,11 @@ function displayAge() {
   let dAge = document.getElementById("displayAge");
   let age = computeAge(year, month, day, yyyy, mm, dd);
   const { ageYears, ageMonths } = age;
-  dAge.textContent = `${ageYears} Years and ${ageMonths} Months Old`;
+  if (!Number.isNaN(ageYears)) {
+    dAge.textContent = `${ageYears} Years and ${ageMonths} Months Old`;
+  } else {
+    dAge.textContent = "could not compute age - enter proper DOB";
+  }
 }
 
 function computeAge(yDOB, mDOB, dDOB, yCur, mCur, dCur) {
