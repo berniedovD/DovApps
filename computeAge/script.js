@@ -1,16 +1,6 @@
-import { computeAge } from "./computeAge.js";
 import { displayAge } from "./displayAge.js";
-
-function fmtDate(dateOBJ) {
-  console.log("inside fmtDate");
-  const yyyy = dateOBJ.getFullYear();
-  const mm = dateOBJ.getMonth() + 1;
-  const dd = dateOBJ.getDate();
-  const fmtToday = `Today's Date=${mm}/${dd}/${yyyy}`;
-  const retDate = { fmtDate: fmtToday, mm: mm, dd: dd, yyyy: yyyy };
-  return retDate;
-}
-
+import { fmtDate } from "./fmtDate.js";
+console.log("at top of script.js");
 const today = new Date();
 const { fmtDate: fmtToday } = fmtDate(today);
 let showToday = document.getElementById("todayd");
