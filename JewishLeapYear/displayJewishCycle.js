@@ -4,7 +4,7 @@ import { computeAge } from "./computeAge.js";
 function jewishLeapYear() {
   console.log("inside the jewishLeapYear function");
   const NUMBER_OF_YEARS_IN_CYCLE = 19;
-  const jYear = document.getElementById("creationYear").value;
+  const jYear = document.getElementById("creationYearID").value;
   const num19yearCycles = parseInt(jYear / NUMBER_OF_YEARS_IN_CYCLE);
   console.log(`num19yearCycles=${num19yearCycles}`);
   const leapyears = [3, 6, 8, 11, 14, 17, 19];
