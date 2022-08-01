@@ -18,9 +18,9 @@ function jewishLeapYear() {
   let displayAnswer = document.getElementById("displayLeap");
   // first of two ways to determine a leapyear is (year*7+1) mod (19) < 7
   if (mdt7 < 7) {
-    displayAnswer.textContent = "Is a Leap year";
+    displayAnswer.textContent = `${jYear}` + " Is a Leap year";
   } else {
-    displayAnswer.textContent = "Is NOT a Leap year";
+    displayAnswer.textContent = `${jYear}` + " Is NOT a Leap year";
   }
   // second way = is the year in cycle in the list above (3,6,8,11,14,17,19)
   if (leapyears.includes(yearInCycle)) {
