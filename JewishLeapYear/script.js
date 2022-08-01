@@ -17,7 +17,10 @@ document
 let getyear = document.getElementById("creationYearID");
 console.log(`getyear= ${getyear}`);
 //getyear.setAttribute("onchange", () => jewishLeapYear());
-getyear.setAttribute("onkeyup", () => jewishLeapYear());
+getyear.setAttribute("onkeyup", function keyup() {
+  console.log("on key up");
+  jewishLeapYear();
+});
 getyear.addEventListener("change", function () {
   console.log("change");
   jewishLeapYear();
